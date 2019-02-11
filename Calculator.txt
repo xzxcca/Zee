@@ -1,0 +1,160 @@
+import java.io.Console;
+import java.util.Scanner;
+
+public class Calculator {
+  
+ 
+  int x;
+  int y;
+  int result;
+  
+ 
+  
+  
+  public void add(){
+    result = x + y;
+  }    
+  public void minus(){
+    result = x - y;
+  }  
+  public void multiple(){
+        result = x * y;
+  }
+  public void divide(){
+        result = x/y; 
+  }
+  public void squareroot(){
+        result = x*x;
+  }
+  public void fact(){   
+        result = x*(x-1);
+    
+  }
+ 
+
+     public static void main(String [] args) {
+ 
+       
+       Console console = System.console();
+          
+       Calculator cal = new Calculator();
+      
+       System.out.println("Please select one of the method that you would like to do below (by select, please enter number \n\n ");
+       System.out.println("Press 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division\n\n");
+       Scanner scan = new Scanner(System.in); 
+       
+  
+       String ch1;
+       String ch2;
+       String ch3;
+       int z;
+       int r;
+       int m;
+       do {
+         ch1 = console.readLine("Want to try Calculate numbers? 1 for yes, and 2 for no\n");
+         r = Integer.parseInt(ch1);
+         if (r == 2){System.exit(0);}
+         
+         do {
+           if (r > 2) { System.out.println("Invalid number.");
+                       }
+         }while(r > 2);
+         
+         
+         ch2 = console.readLine("Select a Method\n");
+         z = Integer.parseInt(ch2);
+         do {
+          if (z > 6) {System.out.println("try again");
+                      }
+         }while(z > 6);
+         
+          if (z == 1) {
+           System.out.println("You selected adition. Please enter the first number.");
+           Scanner c1 = new Scanner(System.in);
+           cal.x = c1.nextInt();
+          
+           System.out.println("Now, Please enter the second number.");
+           Scanner c2 = new Scanner(System.in);
+           cal.y = c2.nextInt();
+          
+           cal.add();
+           System.out.println("Here is your result: " + cal.result);    
+        }
+       
+       if (z == 2) {
+           System.out.println("You selected subtraction. Please enter the first number.");
+           Scanner c3 = new Scanner(System.in);
+           cal.x = c3.nextInt();
+          
+           System.out.println("Now, Please enter the second number.");
+           Scanner c4 = new Scanner(System.in);
+           cal.y = c4.nextInt();
+          
+           cal.minus();
+           System.out.println("Here is your result: " + cal.result);          
+        }
+         
+        
+       if (z == 3) {
+           System.out.println("You selected mutiply method. Please enter the first number.");
+           Scanner c5 = new Scanner(System.in);
+           cal.x = c5.nextInt();
+          
+           System.out.println("Now, Please enter the second number.");
+           Scanner c6 = new Scanner(System.in);
+           cal.y = c6.nextInt();
+          
+           cal.multiple();
+           System.out.println("Here is your result: " + cal.result);    
+        }  
+         
+       if (z == 4) {
+           System.out.println("You selected divide method. Please enter the first number.");
+           Scanner c7 = new Scanner(System.in);
+           cal.x = c7.nextInt();
+          
+           System.out.println("Now, Please enter the second number.");
+           Scanner c8 = new Scanner(System.in);
+           cal.y = c8.nextInt();
+          
+           cal.divide();
+           System.out.println("Here is your result: " + cal.result);    
+        }  
+           
+        if (z == 5) {
+           System.out.println("You selected squareroot method. Please enter the first number.");
+           Scanner c9 = new Scanner(System.in);
+           cal.x = c9.nextInt();
+                
+           cal.squareroot();
+           System.out.println("Here is your result: " + cal.result);    
+        }  
+         
+         
+         if (z == 6) {
+           System.out.println("You selected factorial method. Please enter the first number.");
+           Scanner c10 = new Scanner(System.in);
+           cal.x = c10.nextInt();
+          
+           cal.fact();
+           System.out.println("Here is your result: " + cal.result);
+        }   
+            
+         
+         System.out.println("Let me know if you want to do other calculation methods.");       
+         ch3 = console.readLine("1 for yes, and 2 for no");
+         m = Integer.parseInt(ch3);
+         if (m > 2){System.out.println("invalid");}
+    
+         if (m == 1){System.out.println("Let's go");}
+         
+         if (m == 2){System.out.println("No Problem.");
+                     System.exit(0);
+                    }
+                              
+                                        
+       }while(m == 1);
+       
+     }
+}
+       
