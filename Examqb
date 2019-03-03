@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+
+public class Examqb{
+	
+	
+
+
+
+	public static void main (String [] args) {
+		
+		
+		Examqb qb = new Examqb();
+		
+		
+		int [] n = {1, 2, 3, 5, 8, 13, 21, 34, 55, 89};
+		ArrayList<Integer> num = new ArrayList<Integer>();
+		
+		
+		
+		
+		
+		
+	
+
+	
+	
+		for (int i=0; i<n.length; i++) {
+			if(!((n[i]%2) == 0)) { 
+				num.add(n[i]);;
+				System.out.print(n[i]);
+				System.out.print(",");
+				
+			}
+		
+		}
+		
+		int Totala=0;
+		for (int no:num) {
+			Totala=no+Totala;
+			
+			
+		}
+
+		System.out.print("Odd number Total is " +Totala);
+		
+	}
+	
+	
+
+	
+}
