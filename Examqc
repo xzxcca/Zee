@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Examqc{
+	
+	
+	 public static void main(String[] args){
+	
+	
+	ArrayList<Integer> num = new ArrayList<Integer>(4);
+	
+	Scanner scan1 = new Scanner(System.in);
+	Scanner scan2 = new Scanner(System.in);
+	Scanner scan3 = new Scanner(System.in);
+	Scanner scan4 = new Scanner(System.in);
+	
+	int a,b,c,d;
+	
+	for(int i=0; i<4; i++) {
+		System.out.println("First number: ");
+		a=scan1.nextInt();
+		System.out.println("Second number: ");
+		b=scan1.nextInt();
+		System.out.println("Third number: ");
+		c=scan1.nextInt();
+		System.out.println("Forth number: ");
+		d=scan1.nextInt();
+	}
+	
+	
+	
+	
+	 }
+	
+}
