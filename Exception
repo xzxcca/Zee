@@ -1,0 +1,37 @@
+class Military{
+	
+	static void checkMilitary(int age, int weight) throws InvalidMilitary{
+		if(age >40 && weight > 160) {throw new InvalidMilitary("Too old");
+		}
+		else {System.out.println("Invalid");
+		}
+		}
+
+	
+	public static void main(String [] args) {
+		
+		System.out.println("Welcome to Military");
+		
+		try {
+			
+			checkMilitary(40, 160);
+			
+			
+		}catch(InvalidMilitary e) {
+			e.printStackTrace();
+		}
+		System.out.println("Have a nice day");
+		
+	}
+}
+	
+----------------------------------------------//class below
+
+public class InvalidMilitary extends Exception {
+
+	public InvalidMilitary(String string) {
+		
+	}
+
+	
+}
