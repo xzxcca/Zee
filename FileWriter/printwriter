@@ -1,0 +1,20 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class Exceptionc{
+	
+	
+	
+	public static void main(String [] args) throws IOException {
+		File file = new File("Note.xt");
+		
+		System.out.println(file.exists());
+		file.createNewFile();
+		FileWriter fw = new FileWriter(file);//this means ready for writing
+		PrintWriter pw = new PrintWriter(fw);//setup the write inside the file
+		pw.write("AAAAAAAAAAAA");
+		pw.close();
+}
+}
